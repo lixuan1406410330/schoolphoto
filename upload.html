@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href=" css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/upload.css"/>
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		
+		<header>
+			<span>美图分享-图片上传</span>
+	    </header>
+
+	<div class="btn-group">
+	    <button class="btn">选择图片</button>
+	    <button class="btn">上传图片</button>
+	</div>
+	
+	<div class="upload-box"></div>
+	<script>
+		$(function(){
+			$('.btn:first').click(function(){
+			var file=$('<input type="file" name="file" hidden/>');
+			var preview=$("<img />")
+			preview.addClass('upload-item');
+
+       $('.upload-box').append(file);
+       $('.upload-box').append(preview);
+       file.click();
+       file.change(function(){
+       	var path=$(this).val();
+       	preview.prop('src',path);
+       	//FileReader对象
+       })
+			
+			})
+		})
+		
+	</script>
+	</body>
+</html>

@@ -1,0 +1,98 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+header{
+	height:50px;
+	/*background-color: #ddd;*/
+	text-align: center;
+    line-height: 50px;
+    font-size: 2em;
+    color: #ccc;
+    font-family: 楷体;
+    font-style: bold;
+    font-weight: 900;
+}
+body{
+	background: url(../img/wall.jpg);
+}
+.photo-box{
+	position: relative;
+	min-width: 960px;
+	width:80%;/*设置宽度占据父容器*/
+	margin: 0 auto;
+	padding: 50px 20px;
+}
+.photo-box>img{
+    position: relative;
+    float: left;
+    z-index: 0;
+	width: 240px;
+	height: 180px;
+	border: 5px solid #eee;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+	transition: all 1s;
+	cursor: pointer;
+}
+.photo-box>img:hover{
+	transform: scale(2.0);
+	z-index: 9999;
+}
+
+.p1{transform: rotate(20deg);}
+.p2{transform: rotate(34deg);}
+.p3{transform: rotate(17deg);}
+.p4{transform: rotate(-15deg);}
+.p5{transform: rotate(8deg);}
+.p6{transform: rotate(6deg);}
+.p7{transform: rotate(-20deg);}
+.p8{transform: rotate(-15deg);}
+.p9{transform: rotate(-9deg);}
+.p10{transform: rotate(-17deg);}
+.p11{transform: rotate(28deg);}
+.p12{transform: rotate(30deg);}
+
+.music-box{
+	position: absolute;
+	right: 20px;
+	top: 70px;
+	width:50px;
+	height: 50px;
+	overflow: hidden;
+	background-color: #d2d2d2;
+	border-radius: 50%;
+	border:1px solid #FFF;
+	cursor: pointer;
+	}
+.music-box>img{
+	width: 100%;
+	height: 100%;
+}
+
+
+.play{
+   animation: musicPlay 5s infinite linear;
+}
+@keyframes musicPlay{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+.modal{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:10001;
+	width:100%;
+	min-width: 960px;
+	text-align: center;
+	background-color:rgba(0,0,0,.8);
+}
+
+.img-item{
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+
